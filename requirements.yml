@@ -1,0 +1,9 @@
+---
+roles:
+  - andrewrothstein.docker_engine
+  - andrewrothstein.k3d
+  - andrewrothstein.kubectl
+  - andrewrothstein.k9s
+  - andrewrothstein.protoc
+  - andrewrothstein.argocd
+  - andrewrothstein.go-dev
