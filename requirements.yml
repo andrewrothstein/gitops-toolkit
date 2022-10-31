@@ -7,3 +7,4 @@ roles:
   - andrewrothstein.protoc
   - andrewrothstein.argocd
   - andrewrothstein.go-dev
+  - andrewrothstein.goreleaser
