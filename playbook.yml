@@ -2,14 +2,16 @@
 # Ansible playbook to configure hosts for k3d, docker-engine,
 # and go dev of gitops-toolkit
 # ansible-galaxy install -r requirements.yml
-# ansible-playbook -i localhost, -c local playbook.yml
+# ansible-playbook -i localhost, -c local --tags setup playbook.yml
 # note: some tasks require sudo perms
 - hosts: all
+  tags:
+    - setup
   vars:
     go_dev_install:
-      - pkg: google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
+      - pkg: google.golang.org/protobuf/cmd/protoc-gen-go@latest
         target: protoc-gen-go
-      - pkg: google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+      - pkg: google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
         target: protoc-gen-go-grpc
   roles:
     - andrewrothstein.docker_engine
